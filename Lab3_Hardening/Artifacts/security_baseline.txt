@@ -1,0 +1,16 @@
+Firewall:
+
+    Firewall Settings:
+
+      Mode: Limit incoming connections to specific services and applications
+      Applications:
+          com.apple.cupsd: Allow all connections
+          com.apple.dt.xcode_select.tool-shim: Allow all connections
+          com.apple.remoted: Allow all connections
+          com.apple.ruby: Allow all connections
+          com.apple.sharingd: Allow all connections
+          com.apple.smbd: Allow all connections
+          com.apple.sshd-keygen-wrapper: Allow all connections
+      Firewall Logging: No
+      Stealth Mode: No
+
