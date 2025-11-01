@@ -42,4 +42,4 @@ This device now reflects a baseline-hardened macOS posture suitable for enterpri
 ---
 
 ## 🔗 Next Lab
-➡️ [Proceed to Lab 4 — macOS Log Collection & Threat Detection](../../Lab4_Logging/Artifacts/README.md)
+➡️ [Proceed to Lab 4 — macOS Log Collection & Threat Detection](../Lab4_Logging/Artifacts/README.md)
