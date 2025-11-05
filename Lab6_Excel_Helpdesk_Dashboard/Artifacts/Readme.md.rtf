@@ -1,0 +1,119 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # \uc0\u55358 \u56810  Lab 6 \'97 Excel Helpdesk Dashboard & KPIs\
+\
+\uc0\u55357 \u56513  Folder: `06-Excel-Helpdesk-Dashboard`  \
+\uc0\u55357 \u56517  Date: 2025-11-02  \
+\uc0\u55357 \u57056 \u65039  Tools: Microsoft Excel (macOS), Pivot Tables + Charts, KPI Formulas\
+\
+---\
+\
+## \uc0\u55356 \u57263  Objective\
+\
+Analyze a dataset of helpdesk tickets using Excel and build a **visual dashboard** that includes:\
+\
+- \uc0\u9989  Business KPIs  \
+- \uc0\u9989  Pivot-based insights  \
+- \uc0\u9989  Trend charts  \
+- \uc0\u9989  Dynamic formulas and live-linked values  \
+\
+This dashboard simulates real IT operations reporting and showcases data analysis + visualization skills using Excel.\
+\
+---\
+\
+## \uc0\u55358 \u56817  Dataset\
+\
+Raw data imported into Excel from CSV (21 rows, 6 fields):\
+\
+| Field | Description |\
+|--------|-------------|\
+| Ticket ID | Unique incident number |\
+| Date Opened | Timestamp of ticket creation |\
+| Status | Open / Closed |\
+| Priority | Low / Medium / High |\
+| Assigned Technician | Jordan / Maria / Sam / etc. |\
+| Resolution Time (hrs) | Total hours until resolution |\
+\
+\uc0\u55357 \u56770 \u65039  File: `Dataset/helpdesk_tickets.xlsx`\
+\
+Contains:\
+- `helpdesk_tickets` (raw table)\
+- `KPI_calculations` (formula tab)\
+- `Dashboard` (visualized sheet)\
+\
+---\
+\
+## \uc0\u55357 \u56522  Key KPIs (Auto-updating)\
+\
+| KPI | Formula | Purpose |\
+|-----|---------|---------|\
+| Total Tickets | `=COUNTA(Data[Ticket ID])` | Workload volume |\
+| Closed Ticket % | `=COUNTIF(Data[Status],"Closed")/COUNT(Data[Status])` | SLA performance |\
+| Avg Resolution Time (hrs) | `=AVERAGE(Data[Resolution Time])` | Helpdesk efficiency |\
+| High Priority Tickets % | `=COUNTIF(Data[Priority],"High")/COUNT(Data[Priority])` | Urgency index |\
+| Tickets by Top Tech | `=XLOOKUP(MAX(B:B),B:B,A:A)` | Most active engineer |\
+\
+---\
+\
+## \uc0\u55358 \u56800  Pivot Insights\
+\
+| Chart Name | Purpose |\
+|------------|---------|\
+| Tickets by Technician | Who handles the most volume |\
+| Tickets by Priority Level | Proportion of urgency |\
+| Tickets Over Time | Workload trend over the past month |\
+\
+Each pivot chart auto-refreshes when source data updates.\
+\
+---\
+\
+## \uc0\u55357 \u56522  Final Dashboard Preview\
+\
+\uc0\u55357 \u56525  **Sheet:** `Dashboard`  \
+Includes:\
+- 4 KPI cards  \
+- 3 pivot charts  \
+- Clean professional layout  \
+\
+![Final Dashboard](Screenshots/step06_Dashboard.png)\
+\
+---\
+\
+## \uc0\u55357 \u56568  Screenshots (Evidence)\
+\
+These screenshots walk through the entire lab process:\
+\
+| Step | File Name | Description |\
+|------|-----------|-------------|\
+| 1 | `step01_Dataset_In_Excel.png` | Raw ticket data imported into Excel |\
+| 2 | `step02_KPI_Formula_Results.png` | KPI formula tab showing linked values |\
+| 3 | `step03_Pivot_Tickets_By_Tech.png` | Pivot chart of tickets handled per technician |\
+| 4 | `step04_Pivot_Priority.png` | Pivot chart of tickets by priority |\
+| 5 | `step05_Pivot_Tickets_Over_Time.png` | Pivot chart of daily ticket creation trend |\
+| 6 | `step06_Dashboard.png` | Final dashboard with KPIs and charts |\
+\
+---\
+\
+## \uc0\u55357 \u56615  Skills Demonstrated\
+\
+- Data wrangling using Excel tables  \
+- Dynamic KPI formulas with linked shapes  \
+- Pivot Tables and Pivot Charts  \
+- Dashboard layout and formatting  \
+- Chart interpretation & IT metrics communication  \
+\
+---\
+\
+## \uc0\u55357 \u56960  How to Reproduce\
+\
+1. Open `helpdesk_tickets.xlsx`\
+2. Modify rows in the `helpdesk_tickets` sheet\
+3. Update all visuals via:\
+   ```excel\
+   Data \uc0\u8594  Refresh All\
+}
